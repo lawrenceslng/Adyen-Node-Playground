@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lawrence's Checkout</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/reset.css">
+        <link rel="stylesheet" href="./assets/checkout.css">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/4.7.2/adyen.js"
+     integrity="sha384-hhvkW03dAUXGdLB8iXXHW311qerCuAJvbU4LxZZzMP5knSYEFWAenVr0wa5ulKwO"
+     crossorigin="anonymous"></script>
+
+<link rel="stylesheet"
+     href="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/4.7.2/adyen.css"
+     integrity="sha384-dkJjySvUD62j8VuK62Z0VF1uIsoa+APxWLDHpTjBRwQ95VxNl7oaUvCL+5WXG8lh"
+     crossorigin="anonymous">
+<!-- Adyen provides the SRI hash that you include as the integrity attribute. -->
+<!-- Refer to our release notes to get the SRI hash for the specific version: https://docs.adyen.com/online-payments/release-notes -->
+       
+    </head>
+    <body>
+        <div class="container">
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please   <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <div class="row">
+                <h1>Checkout here!</h1> 
+            </div>
+            <div class="row">
+                <h3>Form for all information (amount, shopper name, address etc)</h3>
+                <h6>NOTE: Only requirement for /paymentMethods request is merchantAccount</h6>
+                <form>
+                    <div class="row">
+                        <div class="col input-group">
+                            <span class="input-group-text">Amount: </span>
+                            <input type="text" class="form-control" id="amount" name="amount">
+                        </div>
+                        <div class="col-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="USD">USD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="EUR">EUR</option>
+                                <option value="SEK">SEK</option>
+                                <option value="DKK">DKK</option>
+                                <option value="HKD">HKD</option>
+                                <option value="SGD">SGD</option>
+                                <option value="AUD">AUD</option>
+                            </select>
+                        </div>
+                        <div class="col input-group">
+                            <span class="input-group-text">Channel: </span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="Web">Web</option>
+                                <option value="iOS">iOS</option>
+                                <option value="Android">Android</option>
+                            </select>
+                        </div>
+                        <div class="col input-group">
+                            <span class="input-group-text">Country Code: </span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="US">US</option>
+                            </select>
+                        </div>
+                        <div class="col input-group">
+                            <span class="input-group-text">Shopper Locale: </span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="en-US">en-US</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col input-group">
+                            <span class="input-group-text">Shopper Reference: </span>
+                            <input type="text" class="form-control" id="shopperReference" name="shopperReference">
+                        </div>
+                        <div class="col form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Split Card Funding Source
+                            </label>
+                        </div>
+                        <div class="col input-group">
+                            <span class="input-group-text">Store: </span>
+                            <input type="text" class="form-control" id="store" name="store">
+                        </div>
+                    </div>
+                    <!-- More to follow -->
+                    <!-- allowed/blocked payment methods? -->
+                    
+                </form>
+                
+                
+                <button type="button" class="btn btn-primary">click to begin</button>
+            </div>
+          
+            <div class="row justify-content-evenly">
+                <div class="col-5">
+                    <h6>Drop In</h6>
+                    <div id="dropin-container"></div>
+                </div>
+                <div class="col-5">
+                    <h6>Components</h6>
+                    <div id="components-container"></div>
+                </div>
+            </div>  
+            
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/checkout.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "Adyen_Node_Checkout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@adyen/api-library": "^9.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
